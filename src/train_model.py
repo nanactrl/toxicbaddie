@@ -18,7 +18,6 @@ from sklearn.metrics import (
     accuracy_score
 )
 
-# ====================== LOAD DATA ======================
 data_path = r"C:\FYPPP2\toxicbaddie\data\combined_cleaned_data.csv"
 
 print("Loading cleaned data...")
@@ -28,10 +27,9 @@ print(f"\nDataset shape: {df.shape}")
 print("\nLabel distribution:")
 print(df['label'].value_counts())
 
-# ====================== HANDLE NaN VALUES ======================
 print(f"\nNaN in clean_text before cleaning: {df['clean_text'].isna().sum()}")
 
-# Remove rows with missing original message
+
 df = df.dropna(subset=['Message'])
 
 # Replace NaN in clean_text with empty string

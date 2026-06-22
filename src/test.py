@@ -15,7 +15,6 @@ def predict_toxicity(text):
     print(f"Confidence: {confidence:.4f}\n")
     return pred
 
-# Test some examples
 if __name__ == "__main__":
     test_messages = [
         "I love you so much, you are amazing!",

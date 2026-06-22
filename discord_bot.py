@@ -44,10 +44,10 @@ def load_safe_model(model_path):
         # ←←← Expected Hash (Update only when you change the model) ←←←
         expected_hash = "dbdb3d65657cf284040cd6f3364f90440ea44584d6a380d35cabc0e2b05ffe2d"
         
-        # Hash Verification
+       
         if current_hash != expected_hash:
             print("⚠️ Model hash mismatch! (Tamper warning)")
-            # raise ValueError("Model tampered!")   # Uncomment this in final/production version
+           
         else:
             print("✅ Model integrity check passed")
             
@@ -55,7 +55,7 @@ def load_safe_model(model_path):
         print(f"❌ Error reading model file: {e}")
         return None
 
-    # Load the actual model
+  
     try:
         model = joblib.load(model_path)
         check_is_fitted(model)
